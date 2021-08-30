@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 import theCategories from '../../data/meals.json'
-import { Card, Button} from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 
 
 
@@ -15,7 +15,7 @@ const mealCats = theCategories.categories
 
 
 
-const [mealData , setMealData] = useState({
+const [mealData] = useState({
     mealList: mealCats
 })
 
@@ -41,22 +41,29 @@ const fetchCategories = async () => {
 
 return (
 <>
-
+<main>
+<Container className="containerAll">
+  
 {mealData.mealList.map((mCategories) => {
     return (
-        <div className="container">
         <Card className="meal-category-card">
-  <Card.Img className="cardImage" variant="top" src={`${mCategories.strCategoryThumb}`} />
+        <figure className="cardImage">
+  <Card.Img variant="top" src={`${mCategories.strCategoryThumb}`} />
+  </figure>
   <Card.Body className="cardInfo">
     <Card.Title className="cardTitle">{mCategories.strCategory}</Card.Title>
-    <Card.Text>
+    <Card.Text className="cardText">
       {mCategories.strCategoryDescription}
     </Card.Text>
   </Card.Body>
 </Card>
-</div>
+
     )
+    
 })}
+
+</Container>
+</main>
 
 </>
 )

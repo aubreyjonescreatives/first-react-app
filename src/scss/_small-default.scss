@@ -10,35 +10,100 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%}
 
  /* -----------------------BODY------------------------------- */ 
 
-header, nav, main, footer {font-family: "lato"; margin: 0 auto;}
+header, .nav, .containerAll, main, footer {font-family: "lato"; margin: 0 auto; max-width: 566px;}
+
+   
+
+main {
 
 
 
-.container {
-    display: flex; 
-
-
-    .meal-category-card {
-        
-        width: 30%;  
-        margin: 20px; 
-         border: 1px solid grey;
+    .containerAll {
+        display: flex; 
+        flex-wrap: wrap; 
+    
+        .meal-category-card {
+            margin: 20px; 
+             border: 1px solid grey;
+             width: 29%;  
+    
+             figure {
+                 width: 100%; 
+    
+            img {
+                    width: 80%; 
+                    display: block; 
+                    margin: auto; 
+                    margin-top: 10px; 
+                 }
+             }
+            
          
-         .cardImage {
-            display: block; 
-            margin: auto; 
+             .cardInfo {
+                 text-align: center; 
+                 margin: 20px; 
+             }
+    
+             .cardTitle {
+                 font-size: 24px; 
+             }
+    
+             .cardText {
+                 padding: 5px; 
+             }
+         
          }
-     
-         .cardInfo {
-             text-align: center; 
-             margin: 20px; 
-         }
+    
+    
+    
+    }
+    
+    
 
-         .cardTitle {
-             font-size: 24px; 
-         }
-     
-     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------Column----------------------------- */
+
+
+
+
+
+.row { 
+    max-width: 650px; 
+  
+  }
+  
+  .column{
+    -webkit-column-gap: normal; /* Chrome, Safari, Opera */
+    -moz-column-gap: normal; /* Firefox */
+    
+   
+  }
+  
+  @for $i from 1 through 12 {
+      $w: ($i / 12) * 100%;
+   .sm-#{$i} {width: $w; float: left;}
+      
+   }
+
+
+
+
+
+
+
 
 
 
