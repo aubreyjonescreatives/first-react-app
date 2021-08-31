@@ -81,8 +81,4 @@ export default App;
 * This is the ReadMe file to demonstrate a list of features in my app
 
 
-12. Push your repository to GitHub, deploy your repo using Netlify, and submit both your GitHub URL AND your Netlify URL via this Canvas assignment.
-
-# This is the Github repository for the app. 
-
-# Here is the deployed Netlify link for this live app 
+12. Here is the link to the deployed app using Netlify: 
