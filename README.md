@@ -25,7 +25,7 @@
 
 3. At least 2 React custom components and display them on your main page
 
-* I created a custom component called MealCategories to render a list of meal category cards
+* I created custom components called Quick Meals as the main page and MealCategories to render data
 
 4. At least one custom component should be a "parent" of another functional React component
 
