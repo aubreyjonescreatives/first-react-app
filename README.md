@@ -5,14 +5,13 @@
 
 1. Use create-react-app to bootstrap your project
 
-`  "scripts": {
-    "start": "react-scripts start",
+```"scripts": {  
+    "start": "react-scripts start",  
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
-  `
+```
 
 
 
