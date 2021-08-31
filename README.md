@@ -73,6 +73,8 @@ export default App;
 
 10. Commit and push your source files into a Git repository named something like "initial-react-app"
 
+* This is the Git repository for the first-react-app
+
 
 11. Be sure your repo includes a ReadMe.md file.  Inside that ReadMe file use Markdown notation to list the features of your app (not the default ReadMe create-react-app provides)
 
