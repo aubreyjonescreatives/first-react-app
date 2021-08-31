@@ -70,22 +70,19 @@ export default App;
 
 9. Demonstrate next generation JavaScript usage in your components including new operators and array methods
 
+* Array Method example in the MealCategories.js file: 
+
 
 ``` 
 
 const MealCategories = () => {
 
 
-
-
 return (
-
-
 
 )
 
 }
-
 
 export default MealCategories 
 
