@@ -18,9 +18,9 @@
 
 2. Use a data source of your own choosing in JSON format that has lists of JavaScript objects within it (feel free to use the JSON sample files I've posted in Canvas)
 
-* I connected my Postman app to themealdb.com API to retrieve a data source in JSON format with lists of JavaScript objects 
+* I connected my Postman app to themealdb.com API to retrieve a data source in JSON format with lists of JavaScript objects. I then added these JavaScript objects to a JSON file in my project.  
 
-![JSON format data source example](jsondata.PNG)
+![JSON format data source example](src/images/jsondata.PNG)
 
 
 3. At least 2 React custom components and display them on your main page
