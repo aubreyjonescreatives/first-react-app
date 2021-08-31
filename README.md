@@ -66,6 +66,47 @@ export default App;
 
 8. Make sure each component can properly render some list of JSON object properties (style the output as you see fit)
 
+* I use the .map method to render a list with next generation JavaScript and JSON object properties. 
+
+
+``` 
+return (
+<>
+<main>
+<Container className="containerAll">
+  
+{mealData.mealList.map((mCategories) => {
+    return (
+        <Card className="meal-category-card">
+        <figure className="cardImage">
+  <Card.Img variant="top" src={`${mCategories.strCategoryThumb}`} />
+  </figure>
+  <Card.Body className="cardInfo">
+    <Card.Title className="cardTitle">{mCategories.strCategory}</Card.Title>
+    <Card.Text className="cardText">
+      {mCategories.strCategoryDescription}
+    </Card.Text>
+  </Card.Body>
+</Card>
+
+    )
+    
+})}
+
+</Container>
+</main>
+
+</>
+)
+
+
+
+
+```
+
+*** A part of the list styled by React Bootstrap styling library
+
+![Rendered list visual example](src/images/customlist.PNG)
 
 
 9. Demonstrate next generation JavaScript usage in your components including new operators and array methods
