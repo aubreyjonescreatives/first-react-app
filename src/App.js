@@ -1,4 +1,8 @@
-import MealCategories from './Components/MealCategories/MealCategories'; 
+  
+import React from 'react';
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import MealCategories from './Components/MealCategories/MealCategories';
+import QuickMeals from './Components/QuickMeals/QuickMeals'; 
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer'; 
 import 'react-bootstrap';
@@ -9,9 +13,12 @@ import './css/mealsStyles.css';
 function App() {
   return (
    <>
-    <NavBar />
-   <MealCategories />
+   <Router>
+     <NavBar />
+  <Route path="/" exact component={QuickMeals} />
+  <Route path="/MealCategories" exact component={MealCategories} />
    <Footer />
+   </Router>
    </>
   );
 }

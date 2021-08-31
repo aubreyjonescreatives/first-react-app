@@ -10,9 +10,9 @@ function NavBar() {
   
 <Navbar bg="dark" variant="dark" className="nav">
     <Container>
-    <Navbar.Brand href="#home">Quick Meals</Navbar.Brand>
+    <Navbar.Brand href="/">Quick Meals</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href="#home">Meal Categories</Nav.Link>
+      <Nav.Link href="MealCategories">Meal Categories</Nav.Link>
     </Nav>
     </Container>
   </Navbar>
