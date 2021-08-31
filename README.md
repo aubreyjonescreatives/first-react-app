@@ -41,7 +41,7 @@
 7. Use the import keyword to add your components to your App.js file (and be sure to export the component properly!)
 
 
-` import MealCategories from './Components/MealCategories/MealCategories'; 
+``` import MealCategories from './Components/MealCategories/MealCategories'; 
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer'; 
 import 'react-bootstrap';
@@ -59,7 +59,7 @@ function App() {
   );
 }
 
-export default App;   `
+export default App;   ```
 
 
 8. Make sure each component can properly render some list of JSON object properties (style the output as you see fit)
