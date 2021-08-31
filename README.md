@@ -1,70 +1,75 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Here is a list of project deliverables: 
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+1. Use create-react-app to bootstrap your project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## I used create-react-app to bootstrap this project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Use a data source of your own choosing in JSON format that has lists of JavaScript objects within it (feel free to use the JSON sample files I've posted in Canvas)
 
-### `npm test`
+## I connected my Postman app to themealdb.com API to retrieve a data source in JSON format with lists of JavaScript objects 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![JSON format data source example](source/images/jsondata.PNG)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. At least 2 React custom components and display them on your main page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## I created a custom component called MealCategories to render a list of meal category cards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. At least one custom component should be a "parent" of another functional React component
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. At least one other custom component should be a "child" React component
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. Use the import keyword to bring your JSON data into your component files
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`import theCategories from '../../data/meals.json'`
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. Use the import keyword to add your components to your App.js file (and be sure to export the component properly!)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+` import MealCategories from './Components/MealCategories/MealCategories'; 
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer'; 
+import 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import './css/mealsStyles.css'; 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+function App() {
+  return (
+   <>
+    <NavBar />
+   <MealCategories />
+   <Footer />
+   </>
+  );
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+export default App;   `
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+8. Make sure each component can properly render some list of JSON object properties (style the output as you see fit)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+9. Demonstrate next generation JavaScript usage in your components including new operators and array methods
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+10. Commit and push your source files into a Git repository named something like "initial-react-app"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+11. Be sure your repo includes a ReadMe.md file.  Inside that ReadMe file use Markdown notation to list the features of your app (not the default ReadMe create-react-app provides)
+
+## This is the ReadMe file to demonstrate a list of features in my app
+
+
+12. Push your repository to GitHub, deploy your repo using Netlify, and submit both your GitHub URL AND your Netlify URL via this Canvas assignment.
+
+## This is the Github repository for the app. 
+
+## Here is the deployed Netlify link for this live app 
