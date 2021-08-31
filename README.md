@@ -59,7 +59,9 @@ function App() {
   );
 }
 
-export default App;   ```
+export default App;   
+
+```
 
 
 8. Make sure each component can properly render some list of JSON object properties (style the output as you see fit)
