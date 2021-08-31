@@ -71,6 +71,29 @@ export default App;
 9. Demonstrate next generation JavaScript usage in your components including new operators and array methods
 
 
+``` 
+
+const MealCategories = () => {
+
+
+
+
+return (
+
+
+
+)
+
+}
+
+
+export default MealCategories 
+
+```
+
+
+
+
 10. Commit and push your source files into a Git repository named something like "initial-react-app"
 
 * This is the Git repository for the first-react-app
