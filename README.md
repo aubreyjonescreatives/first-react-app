@@ -5,13 +5,23 @@
 
 1. Use create-react-app to bootstrap your project
 
-* I used create-react-app to bootstrap this project
+`  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  
+  `
+
+
+
 
 2. Use a data source of your own choosing in JSON format that has lists of JavaScript objects within it (feel free to use the JSON sample files I've posted in Canvas)
 
 * I connected my Postman app to themealdb.com API to retrieve a data source in JSON format with lists of JavaScript objects 
 
-![JSON format data source example](source/images/jsondata.PNG)
+![JSON format data source example](jsondata.PNG)
 
 
 3. At least 2 React custom components and display them on your main page
