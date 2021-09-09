@@ -5,7 +5,7 @@
 
 1. Use create-react-app to bootstrap your project
 
-* Verified from my package.json file: 
+* Verified by my package.json file: 
 
 ```"scripts": {  
     "start": "react-scripts start",  
