@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import theCategories from '../../data/meals.json'
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import MealCard from '../MealCard/MealCard'
+import { Container } from 'react-bootstrap';
 
 
 
@@ -41,22 +42,24 @@ const fetchCategories = async () => {
 
 return (
 <>
+
+
 <main>
+<h1 className="m-c-header">Meal Categories</h1>
+
+
+
 <Container className="containerAll">
   
 {mealData.mealList.map((mCategories) => {
     return (
-        <Card className="meal-category-card">
-        <figure className="cardImage">
-  <Card.Img variant="top" src={`${mCategories.strCategoryThumb}`} />
-  </figure>
-  <Card.Body className="cardInfo">
-    <Card.Title className="cardTitle">{mCategories.strCategory}</Card.Title>
-    <Card.Text className="cardText">
-      {mCategories.strCategoryDescription}
-    </Card.Text>
-  </Card.Body>
-</Card>
+
+        <MealCard
+        id={mCategories.id}
+        strCategoryThumb={mCategories.strCategoryThumb}
+        strCategory={mCategories.strCategory} 
+        strCategoryDescription={mCategories.strCategoryDescription}
+        />
 
     )
     

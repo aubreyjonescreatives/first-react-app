@@ -93,8 +93,18 @@ header, .nav, .containerAll, main, footer {
   margin: 0 auto;
   max-width: 566px; }
 
+.nav {
+  background-color: #84DD63; }
+  .nav .navText {
+    color: #ffffff;
+    font-size: 24px; }
+
 main {
   /* ------------------------Column----------------------------- */ }
+  main .m-c-header {
+    margin: 20px;
+    margin-top: 50px;
+    font-size: 32px; }
   main .containerAll {
     display: flex;
     flex-wrap: wrap; }
@@ -159,6 +169,12 @@ main {
   main .sm-12 {
     width: 100%;
     float: left; }
+
+/* ------------------------Column----------------------------- */
+.footer-container {
+  text-align: center;
+  border-top: 1px solid #84DD63;
+  padding: 20px; }
 
 @media only screen and (min-width: 600px) {
   header, .nav, .containerAll, main, footer {

@@ -5,6 +5,8 @@
 
 1. Use create-react-app to bootstrap your project
 
+* Verified from my package.json file: 
+
 ```"scripts": {  
     "start": "react-scripts start",  
     "build": "react-scripts build",
@@ -25,69 +27,50 @@
 
 3. At least 2 React custom components and display them on your main page
 
-* I created custom components called Quick Meals as the main page and MealCategories to render data
+* I created custom components called MealCategories and MealCard to display data on my main page
 
 4. At least one custom component should be a "parent" of another functional React component
 
-
-5. At least one other custom component should be a "child" React component
-
-
-6. Use the import keyword to bring your JSON data into your component files
-
-`import theCategories from '../../data/meals.json'`
-
-
-7. Use the import keyword to add your components to your App.js file (and be sure to export the component properly!)
-
-
-``` import MealCategories from './Components/MealCategories/MealCategories'; 
-import NavBar from './Components/NavBar/NavBar';
-import Footer from './Components/Footer/Footer'; 
-import 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import './css/mealsStyles.css'; 
-
-
-function App() {
-  return (
-   <>
-    <NavBar />
-   <MealCategories />
-   <Footer />
-   </>
-  );
-}
-
-export default App;   
-
-```
-
-
-8. Make sure each component can properly render some list of JSON object properties (style the output as you see fit)
-
-* I use the .map method to render a list with next generation JavaScript and JSON object properties. 
+* I pass the child React component, MealCard, into the parent component, MealCategories. 
 
 
 ``` 
+
+const MealCategories = () => {
+
+
+
+const mealCats = theCategories.categories
+
+
+
+
+const [mealData] = useState({
+    mealList: mealCats
+})
+
+ 
+
+
 return (
 <>
+
+
 <main>
+<h1 className="m-c-header">Meal Categories</h1>
+
+
+
 <Container className="containerAll">
   
 {mealData.mealList.map((mCategories) => {
     return (
-        <Card className="meal-category-card">
-        <figure className="cardImage">
-  <Card.Img variant="top" src={`${mCategories.strCategoryThumb}`} />
-  </figure>
-  <Card.Body className="cardInfo">
-    <Card.Title className="cardTitle">{mCategories.strCategory}</Card.Title>
-    <Card.Text className="cardText">
-      {mCategories.strCategoryDescription}
-    </Card.Text>
-  </Card.Body>
-</Card>
+
+        <MealCard
+        strCategoryThumb={mCategories.strCategoryThumb}
+        strCategory={mCategories.strCategory} 
+        strCategoryDescription={mCategories.strCategoryDescription}
+        />
 
     )
     
@@ -100,7 +83,158 @@ return (
 )
 
 
+}
 
+
+
+export default MealCategories 
+
+```
+
+
+
+5. At least one other custom component should be a "child" React component
+
+* I created the child component to the parent MealCategories React component to be the MealCard component
+
+``` 
+
+const MealCard = (props) => {
+
+const {strCategoryThumb, strCategory, strCategoryDescription} = props
+
+return (
+<>
+
+
+<main>
+
+<Container className="containerAll">
+        <Card className="meal-category-card">
+        <figure className="cardImage">
+  <Card.Img variant="top" src={`${strCategoryThumb}`} />
+  </figure>
+  <Card.Body className="cardInfo">
+    <Card.Title className="cardTitle">{strCategory}</Card.Title>
+    <Card.Text className="cardText">
+      {strCategoryDescription}
+    </Card.Text>
+  </Card.Body>
+</Card>
+</Container>
+</main>
+
+</>
+)
+
+
+}
+
+
+
+export default MealCard
+
+```
+
+
+6. Use the import keyword to bring your JSON data into your component files
+
+`import theCategories from '../../data/meals.json'`
+
+
+7. Use the import keyword to add your components to your App.js file (and be sure to export the component properly!)
+
+* Code in my App.js file: 
+
+```
+import React from 'react';
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import MealCategories from './Components/MealCategories/MealCategories';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer'; 
+import 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import './css/mealsStyles.css'; 
+
+
+function App() {
+  return (
+   <>
+   <Router>
+     <NavBar />
+  <Route path="/MealCategories" exact component={MealCategories} />
+   <Footer />
+   </Router>
+   </>
+  );
+}
+
+export default App;
+
+
+```
+
+
+8. Make sure each component can properly render some list of JSON object properties (style the output as you see fit)
+
+* I use the .map method to render a list with next generation JavaScript and JSON object properties. 
+
+
+``` 
+
+
+const MealCategories = () => {
+
+
+
+const mealCats = theCategories.categories
+
+
+
+
+const [mealData] = useState({
+    mealList: mealCats
+})
+
+ 
+
+
+return (
+<>
+
+
+<main>
+<h1 className="m-c-header">Meal Categories</h1>
+
+
+
+<Container className="containerAll">
+  
+{mealData.mealList.map((mCategories) => {
+    return (
+
+        <MealCard
+        strCategoryThumb={mCategories.strCategoryThumb}
+        strCategory={mCategories.strCategory} 
+        strCategoryDescription={mCategories.strCategoryDescription}
+        />
+
+    )
+    
+})}
+
+</Container>
+</main>
+
+</>
+)
+
+
+}
+
+
+
+export default MealCategories 
 
 ```
 
@@ -143,3 +277,4 @@ export default MealCategories
 
 
 12. Here is the link to the deployed app using Netlify: 
+[Netlify link](https://first-react-meals-app.netlify.app/)

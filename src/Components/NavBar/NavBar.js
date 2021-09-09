@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import {NavLink} from 'react-router-dom'
+//import {NavLink} from 'react-router-dom'
 
 
 
@@ -8,11 +8,11 @@ function NavBar() {
   return (
   <>
   
-<Navbar bg="dark" variant="dark" className="nav">
+<Navbar className="nav">
     <Container>
-    <Navbar.Brand href="/">Quick Meals</Navbar.Brand>
+    <Navbar.Brand href="MealCategories" className="navText">Instant Meals</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link href="MealCategories">Meal Categories</Nav.Link>
+      <Nav.Link href="MealCategories" className="navText">Meal Categories</Nav.Link>
     </Nav>
     </Container>
   </Navbar>

@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import MealCategories from './Components/MealCategories/MealCategories';
-import QuickMeals from './Components/QuickMeals/QuickMeals'; 
 import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer'; 
 import 'react-bootstrap';
@@ -15,8 +14,7 @@ function App() {
    <>
    <Router>
      <NavBar />
-  <Route path="/" exact component={QuickMeals} />
-  <Route path="/MealCategories" exact component={MealCategories} />
+  <Route path="/" exact component={MealCategories} />
    <Footer />
    </Router>
    </>
