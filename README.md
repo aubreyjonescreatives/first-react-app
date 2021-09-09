@@ -144,7 +144,7 @@ export default MealCard
 
 7. Use the import keyword to add your components to your App.js file (and be sure to export the component properly!)
 
-* Code in my App.js file: 
+* My App.js code example: 
 
 ```
 import React from 'react';
@@ -182,23 +182,6 @@ export default App;
 
 ``` 
 
-
-const MealCategories = () => {
-
-
-
-const mealCats = theCategories.categories
-
-
-
-
-const [mealData] = useState({
-    mealList: mealCats
-})
-
- 
-
-
 return (
 <>
 
@@ -230,20 +213,17 @@ return (
 )
 
 
-}
-
-
-
-export default MealCategories 
 
 ```
 
-*** A part of the list styled by React Bootstrap styling library
+9. A part of the list styled by React Bootstrap styling library
+
+* This image demonstrates how I style my list using the React Bootstrap styling library: 
 
 ![Rendered list visual example](src/images/customlist.PNG)
 
 
-9. Demonstrate next generation JavaScript usage in your components including new operators and array methods
+10. Demonstrate next generation JavaScript usage in your components including new operators and array methods
 
 * Next generation JavaScript Array Method example in the MealCategories.js file: 
 
@@ -266,17 +246,17 @@ export default MealCategories
 
 
 
-10. Commit and push your source files into a Git repository named something like "initial-react-app"
+11. Commit and push your source files into a Git repository named something like "initial-react-app"
 
 * This is the Git repository for the first-react-app
 
 
-11. Be sure your repo includes a ReadMe.md file.  Inside that ReadMe file use Markdown notation to list the features of your app (not the default ReadMe create-react-app provides)
+12. Be sure your repo includes a ReadMe.md file.  Inside that ReadMe file use Markdown notation to list the features of your app (not the default ReadMe create-react-app provides)
 
 * This is the ReadMe file to demonstrate a list of features in my app
 
 
-12. Here is the link to the deployed app using Netlify: 
+13. Here is the link to the deployed app using Netlify: 
 
 
 [Netlify link](https://first-react-meals-app.netlify.app/)
