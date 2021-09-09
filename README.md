@@ -258,5 +258,5 @@ export default MealCategories
 
 13. Here is the link to the deployed app using Netlify: 
 
-
-[Netlify link](https://first-react-meals-app.netlify.app/)
+https://first-react-meals-app.netlify.app/
+[Netlify Project link](https://first-react-meals-app.netlify.app/)
