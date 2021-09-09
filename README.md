@@ -31,7 +31,7 @@
 
 4. At least one custom component should be a "parent" of another functional React component
 
-* I pass the child React component, MealCard, into the parent component, MealCategories. 
+* I pass the child React component, MealCard, into the parent component, MealCategories: 
 
 
 ``` 
@@ -95,7 +95,7 @@ export default MealCategories
 
 5. At least one other custom component should be a "child" React component
 
-* I created the child component to the parent MealCategories React component to be the MealCard component
+* The MealCard component is my child React component:
 
 ``` 
 
@@ -277,4 +277,6 @@ export default MealCategories
 
 
 12. Here is the link to the deployed app using Netlify: 
+
+
 [Netlify link](https://first-react-meals-app.netlify.app/)
