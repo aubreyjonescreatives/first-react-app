@@ -14,7 +14,7 @@ function App() {
    <>
    <Router>
      <NavBar />
-  <Route path="/MealCategories" exact component={MealCategories} />
+  <Route path="/" exact component={MealCategories} />
    <Footer />
    </Router>
    </>
